@@ -1,4 +1,4 @@
-package com.ohgiraffers.test.hw2.model.comparator;
+package com.ohgiraffers.hw2.model.comparator;
 
 import com.ohgiraffers.test.model.dto.BookDTO;
 

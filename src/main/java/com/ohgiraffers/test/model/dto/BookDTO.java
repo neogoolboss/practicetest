@@ -11,19 +11,17 @@ public class BookDTO {
     private String author; // 도서 저자
 
 
-    // 기본 생성자
-    public BookDTO(){}
+    /* 기본 생성자 */
+    public BookDTO() { }
 
-    // 카테고리, 제목, 저자
+    /* 카테고리, 제목, 저자를 매개변수로 갖는 생성자 */
     public BookDTO(int category, String title, String author) {
         this.category = category;
         this.title = title;
         this.author = author;
     }
 
-    // setter() 와 getter()
-
-    // 도서 번호
+    /* 세터, 게터 */
     public void setbNo(int bNo) {
         this.bNo = bNo;
     }
@@ -33,7 +31,7 @@ public class BookDTO {
     }
 
 
-    // 도서 분류코드
+
     public void setCategory(int category) {
         this.category = category;
     }
@@ -42,7 +40,7 @@ public class BookDTO {
         return this.category;
     }
 
-    // 도서 제목
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -51,7 +49,7 @@ public class BookDTO {
         return this.title;
     }
 
-    // 도서 저자
+
     public void setAuthor(String author) {
         this.author = author;
     }
@@ -60,22 +58,12 @@ public class BookDTO {
         return this.author;
     }
 
-
-
-
-    //필드 값 문자열 합친 후 리턴 category 분류 별로 출력
-    //1 : 인문 / 2 : 자연과학 / 3 : 의료 / 4 : 기타
-//  @Override
-//  public String toString() {
-//    return category +" : " + "인문";
-// ", category=" + category +
-//  }
-//
-
+    /* toString() */
     @Override
     public String toString() {
-        return "카테고리 No : " + category +"(" + (category == 1 ? "인문" : category == 2 ? "자연과학" : category == 3 ? "의료" : "기타") + ")" +
-                ", 도서 제목 : " + title + ", 도서 저자 : " + author;
+        return "카테고리 No : " + category +
+                "(" + (category == 1 ? "인문" : category == 2 ? "자연과학" : category == 3 ? "의료" : "기타") + ")" +
+                " / 도서 제목 : " + title + " / 도서 저자 : " + author;
     }
 
 }
