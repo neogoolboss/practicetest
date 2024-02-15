@@ -47,8 +47,8 @@ public class BookMenu extends BookDTO {
 
                 case 3 :
                     System.out.print("검색할 [도서제목]을 입력하세요 : ");
-                    String title = sc.next();
-                    bm.searchBook(title);
+                    inputBookTitle();
+                    bm.searchBook(inputBookTitle());
                     break;
 
                 case 4 :
@@ -132,9 +132,8 @@ public class BookMenu extends BookDTO {
 
     /* 검색할 도서제목을 키보드로 입력받아 리턴 */
     public String inputBookTitle() {
-        System.out.println("검색할 [도서제목]을 입력하세요 : ");
+
         String title = sc.nextLine();
-        sc.nextLine();
 
         return title;
     }
